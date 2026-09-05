@@ -2,7 +2,7 @@ import UserModel from "../models/usermodel.js";
 import {
   registerController,
   loginController,
-} from "../controller/auth.controller.js";
+} from "../controllers/auth.controller.js";
 import upload from "../config/multer.js";
 
 import express from "express";
