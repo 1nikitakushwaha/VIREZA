@@ -746,3 +746,27 @@
 2026-09-05 14:34:25,792 - oa.gemini_generator - INFO - [oa_gen_1788598991410] Generated 3 questions successfully
 2026-09-05 14:34:26,264 - oa.gemini_generator - INFO - [oa_gen_1788598989497] SUCCESS with meta-llama/llama-3.3-70b-instruct on attempt 2
 2026-09-05 14:34:26,264 - oa.gemini_generator - INFO - [oa_gen_1788598989497] Generated 3 questions successfully
+2026-09-06 07:20:07,745 - waitress - INFO - Serving on http://0.0.0.0:5001
+2026-09-06 10:15:34,810 - waitress - INFO - Serving on http://0.0.0.0:5001
+2026-09-06 10:22:08,089 - oa.gemini_generator - INFO - [oa_gen_1788670328089] Starting OA question generation
+2026-09-06 10:22:08,090 - oa.gemini_generator - INFO - [oa_gen_1788670328089] API key configured, attempting AI generation with 3 retries per model
+2026-09-06 10:22:08,090 - oa.gemini_generator - INFO - [oa_gen_1788670328089] Attempting model meta-llama/llama-3.3-70b-instruct (attempt 1/3)
+2026-09-06 10:22:11,043 - oa.gemini_generator - WARNING - [JSON Parser] First parse failed: Unterminated string starting at: line 1 column 230 (char 229)
+2026-09-06 10:22:11,043 - oa.gemini_generator - ERROR - [JSON Parser] Repair and parse failed: Unterminated string starting at: line 1 column 230 (char 229)
+2026-09-06 10:22:11,044 - oa.gemini_generator - ERROR - [JSON Parser] Raw text (first 200 chars): {"questions": [{"id": "q1", "title": "Optimal Delivery Time", "topic": "Binary Search", "difficulty": "Easy", "description": "Find the optimal delivery time for a package given a list of possible deli
+2026-09-06 10:22:11,044 - oa.gemini_generator - WARNING - [oa_gen_1788670328089] Validation failed for meta-llama/llama-3.3-70b-instruct on attempt 1
+2026-09-06 10:22:11,044 - oa.gemini_generator - INFO - [oa_gen_1788670328089] Retrying meta-llama/llama-3.3-70b-instruct...
+2026-09-06 10:22:12,045 - oa.gemini_generator - INFO - [oa_gen_1788670328089] Attempting model meta-llama/llama-3.3-70b-instruct (attempt 2/3)
+2026-09-06 10:23:17,338 - oa.gemini_generator - INFO - [oa_gen_1788670328089] SUCCESS with meta-llama/llama-3.3-70b-instruct on attempt 2
+2026-09-06 10:23:17,339 - oa.gemini_generator - INFO - [oa_gen_1788670328089] Generated 3 questions successfully
+2026-09-06 11:40:10,943 - waitress - INFO - Serving on http://0.0.0.0:5001
+2026-09-06 11:41:21,926 - oa.gemini_generator - INFO - [oa_gen_1788675081926] Starting OA question generation
+2026-09-06 11:41:21,927 - oa.gemini_generator - INFO - [oa_gen_1788675081927] Starting OA question generation
+2026-09-06 11:41:21,927 - oa.gemini_generator - INFO - [oa_gen_1788675081926] API key configured, attempting AI generation with 3 retries per model
+2026-09-06 11:41:21,928 - oa.gemini_generator - INFO - [oa_gen_1788675081927] API key configured, attempting AI generation with 3 retries per model
+2026-09-06 11:41:21,928 - oa.gemini_generator - INFO - [oa_gen_1788675081926] Attempting model meta-llama/llama-3.3-70b-instruct (attempt 1/3)
+2026-09-06 11:41:21,929 - oa.gemini_generator - INFO - [oa_gen_1788675081927] Attempting model meta-llama/llama-3.3-70b-instruct (attempt 1/3)
+2026-09-06 11:41:48,247 - oa.gemini_generator - INFO - [oa_gen_1788675081926] SUCCESS with meta-llama/llama-3.3-70b-instruct on attempt 1
+2026-09-06 11:41:48,248 - oa.gemini_generator - INFO - [oa_gen_1788675081926] Generated 3 questions successfully
+2026-09-06 11:42:07,234 - oa.gemini_generator - INFO - [oa_gen_1788675081927] SUCCESS with meta-llama/llama-3.3-70b-instruct on attempt 1
+2026-09-06 11:42:07,236 - oa.gemini_generator - INFO - [oa_gen_1788675081927] Generated 3 questions successfully

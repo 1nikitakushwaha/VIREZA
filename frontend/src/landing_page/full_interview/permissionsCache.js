@@ -1,7 +1,4 @@
-// Centralized cache for browser-level permissions verified during the
-// Full Interview pre-flight SystemCheck. The orchestrator runs the
-// permission check ONCE; child round containers read from this cache so
-// they do not trigger redundant browser prompts.
+
 
 const CACHE_KEY = "vireza_full_interview_permissions";
 

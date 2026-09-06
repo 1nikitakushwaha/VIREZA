@@ -119,8 +119,7 @@ const Signup = () => {
         },
       );
 
-      // backend has a typo in key: "succces" — handle both
-      if (response.data.success || response.data.succces) {
+      if (response.data.success) {
         window.location.href = "/login";
       }
     } catch (error) {

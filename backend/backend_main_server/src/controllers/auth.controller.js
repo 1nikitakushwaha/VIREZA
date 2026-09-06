@@ -9,7 +9,7 @@ export const registerController = async (req, res) => {
     const { fullname, email, password, phone } = req.body;
     if (!fullname || !email || !password || !phone) {
       return res.status(400).json({
-        succces: false,
+        success: false,
         message: "all the details are required",
       });
     }

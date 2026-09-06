@@ -1,11 +1,13 @@
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import './index.css'; 
+import { BrowserRouter} from "react-router-dom";
+import ProtectedRoute from "./Protectroute.jsx";
+import "./index.css";
 import Navbar from "./landing_page/Navbar";
 import Footer from "./landing_page/Footer";
 import Homepage from "./landing_page/home/Homepage";
 import ResumeATSpage from "./landing_page/resume/ResumeATS/ResumeATSpage";
- 
+
 import Signup from "./landing_page/signup/Signup";
 import Login from "./landing_page/login/login_page";
 import ResumeBuildPage from "./landing_page/resume/ResumeBuilder/ResumeBuildpage";
@@ -32,7 +34,14 @@ import { ResumeProvider } from "./landing_page/resume/ResumeBuilder/ResumeContex
 
 function App() {
   const location = useLocation();
-  const hideLayout = ["/signup", "/login", "/oa", "/technical-interview", "/hr-interview", "/full-interview"].includes(location.pathname);
+  const hideLayout = [
+    "/signup",
+    "/login",
+    "/oa",
+    "/technical-interview",
+    "/hr-interview",
+    "/full-interview",
+  ].includes(location.pathname);
 
   return (
     <div className="app-container">
@@ -42,30 +51,54 @@ function App() {
         <ResumeProvider>
           <Routes>
             <Route path="/" element={<Homepage />} />
-            <Route path="/resumeATS" element={<ResumeATSpage />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/resume/builder" element={<ResumeBuildPage/>}/>
-            <Route path="/resume/templates" element={<RTPAGE/>}/>
-            <Route path="/cv/builder" element={<CVpage/>}/>
-            <Route path="/cv/templates" element={<CTpage/>}/>
-            <Route path="/AiInterviewcoach" element={<AIPage/>}/>
-            <Route path="/oa" element={<OAMainContainer/>}/>
-            <Route path="/technical-interview" element={<TechnicalInterviewContainer/>}/>
-            <Route path="/hr-interview" element={<HRInterviewContainer/>}/>
-            <Route path="/full-interview" element={<FullInterviewContainer/>}/>
-            
-            {/* Blog Routes */}
-            <Route path="/blog" element={<BlogPage/>}/>
-            <Route path="/blog/resume-vs-cover-letter" element={<BLOG1/>}/>
-            <Route path="/blog/international-cv-format" element={<BLOG2/>}/>
-            <Route path="/blog/60-soft-skills-for-resumes" element={<BLOG3/>}/>
-            <Route path="/blog/best-chatgpt-resume-prompts" element={<BLOG4/>}/>
-            <Route path="/blog/ats-ready-resume-builder-2026" element={<BLOG5/>}/>
+            <Route element={<ProtectedRoute />}>
+              <Route path="/resumeATS" element={<ResumeATSpage />} />
 
-            {/* Resume Workspace Routes */}
-            <Route path="/resume/builder/resumeform" element={<ResumeWorkspace/>}/>
-            <Route path="/resume/builder/workspace" element={<ResumeWorkspace/>}/>
+              <Route path="/resume/builder" element={<ResumeBuildPage />} />
+              <Route path="/resume/templates" element={<RTPAGE />} />
+              <Route path="/cv/builder" element={<CVpage />} />
+              <Route path="/cv/templates" element={<CTpage />} />
+              <Route path="/AiInterviewcoach" element={<AIPage />} />
+              <Route path="/oa" element={<OAMainContainer />} />
+              <Route
+                path="/technical-interview"
+                element={<TechnicalInterviewContainer />}
+              />
+              <Route path="/hr-interview" element={<HRInterviewContainer />} />
+              <Route
+                path="/full-interview"
+                element={<FullInterviewContainer />}
+              />
+
+              {/* Blog Routes */}
+              <Route path="/blog" element={<BlogPage />} />
+              <Route path="/blog/resume-vs-cover-letter" element={<BLOG1 />} />
+              <Route path="/blog/international-cv-format" element={<BLOG2 />} />
+              <Route
+                path="/blog/60-soft-skills-for-resumes"
+                element={<BLOG3 />}
+              />
+              <Route
+                path="/blog/best-chatgpt-resume-prompts"
+                element={<BLOG4 />}
+              />
+              <Route
+                path="/blog/ats-ready-resume-builder-2026"
+                element={<BLOG5 />}
+              />
+
+              {/* Resume Workspace Routes */}
+              <Route
+                path="/resume/builder/resumeform"
+                element={<ResumeWorkspace />}
+              />
+              <Route
+                path="/resume/builder/workspace"
+                element={<ResumeWorkspace />}
+              />
+            </Route>
           </Routes>
         </ResumeProvider>
       </main>

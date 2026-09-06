@@ -201,21 +201,27 @@ export default function OAResultDashboard({ result, onRestart }) {
           {/* GEMINI AI QUALITATIVE FEEDBACK */}
           {/* ========================================================= */}
           <div className="p-4 rounded-3 border" style={{ backgroundColor: "#f8fafc" }}>
-          <h5 className="fw-bold text-dark mb-3">
-            <i className="fa-solid fa-robot me-2" style={{ color: "#794ea1" }}></i> Gemini AI Coach Feedback
-          </h5>
+            <h5 className="fw-bold text-dark mb-3">
+              <i className="fa-solid fa-robot me-2" style={{ color: "#794ea1" }}></i> Gemini AI Coach Feedback
+            </h5>
 
-          <div>
-            <h6 className="fw-bold text-dark mb-2">Recommended Preparation Topics</h6>
-            <div className="d-flex flex-wrap gap-2">
-              {feedback.recommendedPreparation?.map((topic, i) => (
-                <span key={i} className="badge bg-white text-dark border px-3 py-2">
-                  🎯 {topic}
-                </span>
-              ))}
+            <div className="row g-4">
+              
+
+              
+
+              <div className="col-12 border-top pt-3">
+                <h6 className="fw-bold text-dark mb-1">Recommended Preparation Topics</h6>
+                <div className="d-flex flex-wrap gap-2 pt-1">
+                  {feedback.recommendedPreparation?.map((topic, i) => (
+                    <span key={i} className="badge bg-white text-dark border px-3 py-2">
+                      🎯 {topic}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
           <div className="mt-5 text-center">
             <button

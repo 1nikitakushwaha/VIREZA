@@ -23,7 +23,7 @@ export default function OACodingEnvironment({ session, onFinishOA }) {
   const [isScreenSharing, setIsScreenSharing] = useState(true);
   const [warningAlert, setWarningAlert] = useState("");
 
-  // Server-controlled Timer calculation
+  
   const [timeRemaining, setTimeRemaining] = useState(() => {
     if (session?.endsAt) {
       const now = Date.now() / 1000;
@@ -196,9 +196,7 @@ export default function OACodingEnvironment({ session, onFinishOA }) {
       className="d-flex flex-column vh-100 bg-dark text-light overflow-hidden"
       style={{ fontFamily: "'Inter', sans-serif" }}
     >
-      {/* ========================================================= */}
-      {/* TOP NAVIGATION & PROCTORING BAR */}
-      {/* ========================================================= */}
+      
       <header
         className="d-flex align-items-center justify-content-between px-3 py-2 border-bottom border-secondary"
         style={{ backgroundColor: "#1e1e2e", height: "60px" }}
