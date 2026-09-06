@@ -84,27 +84,7 @@ export default function HRInterviewComplete({ report, onViewReport, onRestart, o
           </div>
         )}
 
-        {report.strengths && report.strengths.length > 0 && (
-          <div className="mb-4">
-            <h6 className="fw-bold text-dark mb-2">Strengths</h6>
-            <ul className="ps-3">
-              {report.strengths.map((s, idx) => (
-                <li key={idx} className="text-dark small mb-1">✓ {s}</li>
-              ))}
-            </ul>
-          </div>
-        )}
-
-        {report.improvements && report.improvements.length > 0 && (
-          <div className="mb-4">
-            <h6 className="fw-bold text-dark mb-2">Areas to Improve</h6>
-            <ul className="ps-3">
-              {report.improvements.map((item, idx) => (
-                <li key={idx} className="text-dark small mb-1">• {item}</li>
-              ))}
-            </ul>
-          </div>
-        )}
+        
 
         {report.summary && (
           <div className="p-3 bg-light rounded-3 border mb-4">

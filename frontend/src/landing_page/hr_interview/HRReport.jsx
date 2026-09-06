@@ -139,36 +139,7 @@ export default function HRReport({ report, onBack, onRestart }) {
         </div>
       )}
 
-      <div className="row g-4 mb-4">
-        <div className="col-md-6">
-          <div className="card border-0 shadow-sm p-4 h-100" style={{ borderRadius: "20px" }}>
-            <h5 className="fw-bold text-dark mb-3">Strengths</h5>
-            {strengthsGaps.strengths && strengthsGaps.strengths.length > 0 ? (
-              <ul className="small text-secondary mb-0" style={{ lineHeight: "1.7" }}>
-                {strengthsGaps.strengths.map((s, i) => (
-                  <li key={i}>{s}</li>
-                ))}
-              </ul>
-            ) : (
-              <p className="small text-muted mb-0">No standout strengths identified.</p>
-            )}
-          </div>
-        </div>
-        <div className="col-md-6">
-          <div className="card border-0 shadow-sm p-4 h-100" style={{ borderRadius: "20px" }}>
-            <h5 className="fw-bold text-dark mb-3">Areas to Develop</h5>
-            {strengthsGaps.knowledge_gaps && strengthsGaps.knowledge_gaps.length > 0 ? (
-              <ul className="small text-secondary mb-0" style={{ lineHeight: "1.7" }}>
-                {strengthsGaps.knowledge_gaps.map((g, i) => (
-                  <li key={i}>{g}</li>
-                ))}
-              </ul>
-            ) : (
-              <p className="small text-muted mb-0">No critical development areas identified.</p>
-            )}
-          </div>
-        </div>
-      </div>
+      
 
       {report.question_performance && report.question_performance.length > 0 && (
         <div className="card border-0 shadow-sm p-4 mb-4" style={{ borderRadius: "20px" }}>
