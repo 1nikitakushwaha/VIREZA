@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { BrowserRouter} from "react-router-dom";
-import ProtectedRoute from "./Protectroute.jsx";
+// import ProtectedRoute from "./Protectroute.jsx";
 import "./index.css";
 import Navbar from "./landing_page/Navbar";
 import Footer from "./landing_page/Footer";
@@ -53,7 +53,7 @@ function App() {
             <Route path="/" element={<Homepage />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
-            <Route element={<ProtectedRoute />}>
+            {/* <Route element={<ProtectedRoute />}> */}
               <Route path="/resumeATS" element={<ResumeATSpage />} />
 
               <Route path="/resume/builder" element={<ResumeBuildPage />} />
@@ -98,7 +98,7 @@ function App() {
                 path="/resume/builder/workspace"
                 element={<ResumeWorkspace />}
               />
-            </Route>
+            {/* </Route> */}
           </Routes>
         </ResumeProvider>
       </main>
